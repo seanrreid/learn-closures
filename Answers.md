@@ -164,10 +164,10 @@ for (var i = 0; i < nodes.length; i++) {
 ```
 var nodes = document.getElementsByTagName('button');
 for (var i = 0; i < nodes.length; i++) {
-   nodes[i].addEventListener('click', (function(i) {
+   nodes[i].addEventListener('click', (function(elementId) {
       // IIFE GOES HERE
       return function() {
-         console.log('You clicked element #' + i);
+         console.log('You clicked element #' + elementId);
       }
    })(i));
 }
