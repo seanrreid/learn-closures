@@ -1,5 +1,5 @@
 
-###Example 1
+### Example 1
 
 - What will the following code return?
 - Where does the _closure_ occur?
@@ -18,14 +18,14 @@ function introduction() {
 introduction();
 ```
 
-###Example 2
+### Example 2
 Source: [https://www.reddit.com/r/javaScriptStudyGroup/comments/48aaz1/week_7_focus_closures/d0otqbf/](https://www.reddit.com/r/javaScriptStudyGroup/comments/48aaz1/week_7_focus_closures/d0otqbf/)
 
 **Closures** are created by a function object and the _free_ variables inside that function (or, more specifically, what those variables reference).
 
 A **_free_/non-local_ variable** is a variable that was not instantiated inside a function. For example, it was neither locally declared nor passed as parameter (i.e. assigned via LHS, implied LHS, or RHS).
 
-####Example 2.a
+#### Example 2.a
 - List the _free_ variables.
 - List the _declared variables.
 - What will `totalOfSums` return?
@@ -41,7 +41,7 @@ function plus(a, b) {
 }
 ```
 
-####Example 2.b
+#### Example 2.b
 - What will the `totalOfSums` return?
 - Where is the _closure_?
 
@@ -62,7 +62,7 @@ function sums() {
 var plus = sums();
 ```
 
-###Example 3
+### Example 3
 Source: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 
 > A _closure_ is the combination of a function and the lexical environment within which that function was declared. This environment consists of any local variables that were in-scope at the time that the closure was created. 
@@ -82,7 +82,7 @@ var myFunc = makeFunc();
 myFunc();
 ```
 
-###Example 4
+### Example 4
 Source: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 
 - What is the output of `console.log(add5(2));`?
@@ -103,7 +103,7 @@ console.log(add5(2));
 console.log(add10(2));
 ```
 
-####Example 5 
+#### Example 5 
 
 - Based on the following HTML, what will the javascript output?
 - What change would you make to get the desired output?

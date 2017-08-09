@@ -1,5 +1,5 @@
 
-###Example 1
+### Example 1
 
 - What will the following code return?
 - Where does the _closure_ occur?
@@ -17,18 +17,18 @@ function introduction() {
 
 introduction();
 ```
-####Answer:
+#### Answer:
 - `"My Name is Mr. Roboto"`
 - The `displayIntroduction()` function is a _closure_. It is a function object returned by the `introduction()` first class function. 
 
-###Example 2
+### Example 2
 Source: [https://www.reddit.com/r/javaScriptStudyGroup/comments/48aaz1/week_7_focus_closures/d0otqbf/](https://www.reddit.com/r/javaScriptStudyGroup/comments/48aaz1/week_7_focus_closures/d0otqbf/)
 
 **Closures** are created by a function object and the _free_ variables inside that function (or, more specifically, what those variables reference).
 
 A **_free_/non-local_ variable** is a variable that was not instantiated inside a function. For example, it was neither locally declared nor passed as parameter (i.e. assigned via LHS, implied LHS, or RHS).
 
-####Example 2.a
+#### Example 2.a
 - List the _free_ variables.
 - List the _declared variables.
 - What will `totalOfSums` return?
@@ -43,12 +43,12 @@ function plus(a, b) {
   return sum;
 }
 ```
-####Answer
+#### Answer
 - Free: `totalOfSums` 
 - Declared: `sum`,`a`,`b` 
 - `undefined`
 
-####Example 2.b
+#### Example 2.b
 - What will the `plus(1,2)` return?
 - Where is the _closure_?
 
@@ -71,15 +71,15 @@ plus(1,2);
 
 ```
 
-####Answer
+#### Answer
 - `"The total of all sums you have calculated is: 3"`
 - The _closure_ is created when we instantiate the `plus` object.
 - The `return function()` expression is an **IIFE**
 
-####Why?
+#### Why?
 See Example 3. :)
 
-###Example 3
+### Example 3
 Source: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 
 > A _closure_ is the combination of a function and the lexical environment within which that function was declared. This environment consists of any local variables that were in-scope at the time that the closure was created. 
@@ -99,15 +99,15 @@ var myFunc = makeFunc();
 myFunc();
 ```
 
-####Answer
+#### Answer
 - `"Mozilla"`
 
-####Why?
+#### Why?
 > In this case, `myFunc` is a **reference** to the instance of the function `displayName` created when `makeFunc` is run.
 > The instance of `displayName` maintains a reference to its lexical environment, within which the variable name exists. 
 > For this reason, when `myFunc` is invoked, the **variable name remains available** for use and "Mozilla" is passed to alert.
 
-###Example 4
+### Example 4
 Source: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 
 - What is the output of `console.log(add5(2));`?
@@ -128,18 +128,18 @@ console.log(add5(2));
 console.log(add10(2));
 ```
 
-####Answer
+#### Answer
 - `7`
 - `12`
 - `add5` and `add10` create _closures_.
 
-####Why??
+#### Why??
 > `makeAdder` is [essentially], a function factory — it creates functions which can add a specific value to their argument. 
 > In the above example we use our function factory to create two new functions — one that adds 5 to its argument, and one that adds 10.
 > [These new functions],`add5` and `add10`, are both closures. They share the same function body definition, but store different lexical environments. [In the lexical environment for] `add5`, `x` is 5, while in the lexical environment for `add10`, `x` is 10.
 
 
-####Example 5 
+#### Example 5 
 
 - Based on the following HTML, what will the javascript output?
 - What change would you make to get the desired output?
@@ -173,7 +173,7 @@ for (var i = 0; i < nodes.length; i++) {
 }
 ```
 
-####Why??
+#### Why??
 The _terminating condition_ of the loop is when i is **greater than 3** (based on the node placement in the array). The output of **4** is the value of the `i` after the loop terminates.
 
 The loop originally did _not_ capture its own copy of `i`, `i` was in the same, shared, **global** scope.  That scope contained a single `i`.  The way scope works, the event is closed over the _same shared global scope_, which has, in fact, only one `i` in it. As such, we get the same value each time a button is clicked. 
