@@ -178,4 +178,4 @@ The _terminating condition_ of the loop is when i is **greater than 3** (based o
 
 The loop originally did _not_ capture its own copy of `i`.  The way scope works, the event is closed over the _same shared global scope_, which has, in fact, only one `i` in it. As such, we get the same value each time a button is clicked. 
 
-An _IIFE_ creates its **own scope** as part of an _inner function_ object. Note that, the syntax `(i))` at the close of the `addEventListener` function executes the function immediately, and passes `i` as a value. 
+An _IIFE_ creates its **own scope** as part of an _inner function_ object. Note that, the syntax `(i))` at the close of the `addEventListener` function executes the `return function()` expression immediately, and passes `i` as a value. 
