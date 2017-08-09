@@ -11,10 +11,9 @@
 > Closures are created by _defining an inner function inside a first class one_.  
 >
 > Unlike a local variable, **an inner function can be accessed from outside the first class function that created it using a closed over variable, or _closure_.**  
-> 
-> That’s what makes closures significant.
+>
+> A _closure_ is an object in JavaScript that is created when an _inner function is accessible from outside the function that created it_. It’s independent, and can be useful in simulating privacy as a design pattern.
 
 [https://ourcodeblog.com/tag/whiteboard-exercises/](https://ourcodeblog.com/tag/whiteboard-exercises/)
 
 Further reading: [https://www.sitepoint.com/javascript-closures-demystified/](https://www.sitepoint.com/javascript-closures-demystified/)
-
