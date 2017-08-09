@@ -7,7 +7,7 @@
 ```
 function introduction() {
   var phrase1 = "My Name is ";
-  var phrase2 = "Mr. Roboto"
+  var phrase2 = "Mr. Roboto";
   
   function displayIntroduction() { 
     console.log(phrase1+phrase2);    
