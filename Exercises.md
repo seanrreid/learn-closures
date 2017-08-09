@@ -42,7 +42,7 @@ function plus(a, b) {
 ```
 
 #### Example 2.b
-- What will the `totalOfSums` return?
+- Run `plus(1,2)`, what will the `totalOfSums` return?
 - Where is the _closure_?
 
 ```
